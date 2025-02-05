@@ -5,7 +5,6 @@ class Solution {
        if(grid==null || grid.length==0) return 0;
        Queue<int[]> q=new LinkedList<>();
        int fresh=0;
-       int ct=0;
        for(int row=0;row<r;row++){
         for(int col=0;col<c;col++){
             if(grid[row][col]==2){
