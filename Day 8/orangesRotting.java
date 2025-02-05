@@ -4,7 +4,7 @@ class Solution {
        int c=grid[0].length;
        if(grid==null || grid.length==0) return 0;
        Queue<int[]> q=new LinkedList<>();
-       int fresh=0;
+       int fruit=0;
        for(int row=0;row<r;row++){
         for(int col=0;col<c;col++){
             if(grid[row][col]==2){
@@ -12,11 +12,11 @@ class Solution {
                 
             }
             if(grid[row][col]!=0){
-                fresh++;
+                fruit++;
             }
         }
        }
-       if(fresh==0) return 0;
+       if(fruit==0) return 0;
        int[] drow={-1,0,1,0};
        int[] dcol={0,1,0,-1};
        int cnt=0,mincnt=0;
@@ -41,7 +41,7 @@ class Solution {
             if(q.size()!=0) mincnt++;
        }
        
-       return (cnt==fresh)? mincnt:-1;
+       return (cnt==fruit)? mincnt:-1;
 
     }
 
